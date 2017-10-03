@@ -5,7 +5,7 @@ $(document).ready(function () {
     //scroll to element
     function scrollTo(element){
       var destination = $(element).offset().top - 120;
-      $('html').animate({ scrollTop: destination }, 500);
+      $('html').animate({ scrollTop: destination }, 800);
       return false; 
     };
 
