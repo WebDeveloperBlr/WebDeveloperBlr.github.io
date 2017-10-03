@@ -5,7 +5,7 @@ $(document).ready(function () {
     //scroll to element
     function scrollTo(element){
       var destination = $(element).offset().top - 120;
-      $('html').animate({ scrollTop: destination }, 800);
+      $('html').animate({ scrollTop: destination }, 1000);
       return false; 
     };
 
@@ -58,7 +58,7 @@ $(document).ready(function () {
           addActiveDot('#fifthSection');
           break;
       }
-      
+      return false;
     });
     
     //hamburger position
@@ -70,22 +70,26 @@ $(document).ready(function () {
         $('.arrow-up').removeClass('fade-out').addClass('fade-in');
       }else
         $('.arrow-up').addClass('fade-out').removeClass('fade-in');
+        return false;
     });
 
     //close popup
     $('#close').click(function(){
       $('.modal-wrapper').removeClass('fade-in').addClass('fade-out');
+      return false;
     });
 
     //show popup
     $('.main-section__button').click(function(){
       $('.modal-wrapper').removeClass('fade-out').addClass('fade-in');
+      return false;
     });
 
     //click - scroll
     $('.main-section__array-down, .arrow-up, .menu-link, .dots a').click(function(){
       var element = $(this).attr("href");
       scrollTo(element);
+      return false;
     });
 
     //change flex-orientation on small screen
