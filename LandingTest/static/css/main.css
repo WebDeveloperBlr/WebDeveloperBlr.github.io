@@ -1,30 +1,30 @@
 @font-face {
   font-family: 'FiraSansCondensed-Bold';
-  src: url("/static/fonts/FiraSansCondensed-Bold.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-Bold.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FiraSansCondensed-Light';
-  src: url("/static/fonts/FiraSansCondensed-Light.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-Light.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FiraSansCondensed-Medium';
-  src: url("/static/fonts/FiraSansCondensed-Medium.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-Medium.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FiraSansCondensed-Regular';
-  src: url("/static/fonts/FiraSansCondensed-Regular.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-Regular.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FiraSansCondensed-SemiBold';
-  src: url("/static/fonts/FiraSansCondensed-SemiBold.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-SemiBold.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
