@@ -78,7 +78,7 @@ $(document).ready(function () {
     });
 
     //show popup
-    $('#zayavka').click(function(){
+    $('.main-section__button').click(function(){
       $('.modal-wrapper').removeClass('fade-out').addClass('fade-in');
     });
 
