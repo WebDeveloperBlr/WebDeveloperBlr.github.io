@@ -1,0 +1,20 @@
+header.header.dark-theme
+	div.flex-container.flex-space-between.fullheight
+		div.logo.grid-item
+			img.logo__img(src="../static/img/header/logo.png")
+		input(id="toggle" type="checkbox")
+		label(for="toggle").toggle-container
+			span.button.button-toggle
+				div.toggle-lines
+		ul(id="menu").menu-list.flex-container.flex-space-evenly
+			each link, title in nav.navPages
+				a(href=link).menu-link
+					li.menu-item
+						= title
+		div.top-contacts.grid-item
+			span.header__phone 
+				a(href="#").orange-text. 
+					+375 (29) 123-45-67#[br]
+				a(href="#").orange-text. 
+					+375 (29) 123-45-67	
+div.block

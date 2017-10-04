@@ -1,0 +1,25 @@
+div(id="modal").modal-wrapper
+	div.modal-form-wrapper
+		form(method="post" required).fullheight
+			a(id="close").modal-close +
+			h2.modal-title Заполните форму
+			div.modal-items
+				h4 введите Ф.и.о 
+				textarea(name="fio", id="fio" required) 
+				h4 Введите название организации
+				input(type="text", name="org", id="org" required) 
+				h4 Введите Ваш номер телефона
+				input(type="text", name="phone", id="phone" required)
+				h4 Введите Ваш Email
+				input(type="email", name="email-adress", id="email-adress" required)
+				input(type="submit", value="Оформить заявку").button.orange-theme
+
+a(href="#firstSection").arrow-up.flex-container.flex-center
+	img(src="../static/img/body/arrow-up.png")
+
+div.dots
+	a(id="", href="#firstSection").dot
+	a(id="", href="#secondSection").dot
+	a(id="", href="#thirdSection").dot
+	a(id="", href="#fourthSection").dot
+	a(id="", href="#fifthSection").dot

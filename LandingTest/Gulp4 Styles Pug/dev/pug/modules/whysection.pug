@@ -1,0 +1,17 @@
+section(id="thirdSection").why-section.section
+	div.flex-column
+		div.why-section__title
+			h2.title-h2 Почему мы
+			div.separator
+				img.separator-img(src="../static/img/general/separator.png")
+			p.content-p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et #[br] dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+		div.why-section__items-wrapper
+			div.container
+				div.flex-container.flex-center.flex-row-wrap
+					
+					each val in [1,2,3,4,5,6,7,8]
+						div.why-section__item
+							img(src="../static/img/whysection/icon"+val+".png").why-section__item-img
+							h4.why-section__h4= "преимущество " + val
+							p.why-section__p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+					

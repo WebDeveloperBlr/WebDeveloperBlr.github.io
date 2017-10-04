@@ -1,0 +1,10 @@
+{
+  "navPages": {
+    "Главная" : "#firstSection",
+    "Портфолио" : "#secondSection",
+    "Преимущества" : "#thirdSection",
+    "Схема работы" : "#fourthSection",
+    "Отзывы" : "#fourthSection",
+    "Контакты" : "#fifthSection"
+  }
+}

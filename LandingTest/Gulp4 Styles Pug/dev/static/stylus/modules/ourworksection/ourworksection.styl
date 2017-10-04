@@ -1,0 +1,63 @@
+.our-work-section
+	border-top 4px solid Accent
+	border-bottom 2px solid #b5c4c4
+	background-image url("../static/img/ourworksection/city.jpg")
+	width 100%
+	min-height 975px
+	text-align center
+	background-size cover
+	background-repeat no-repeat
+div.our-work-section__title 
+	margin-top 60px
+.our-work-section__container
+	padding 0 250px
+.our-work-section__item
+	margin 0 10px
+	overflow hidden
+	height 320px
+	flex: 1 30%;
+	background-color DarkColor
+	margin-bottom 10px
+	position relative
+	img
+		max-height 320px
+		max-width 460px
+		margin auto
+	&:hover
+		.item-description
+			visibility visible
+			bottom 0px
+.item-description
+	
+	visibility hidden
+	transition .5s
+	padding 15px 55px
+	text-align left
+	absolute(,,-100px,)
+	size(100%, 100%)
+	height auto
+	background-color #d4d7d8
+	.separator
+		margin 5px 0
+
+		
+		
+.item-description__h4
+	color #28363d
+	font-family BoldFont
+	letter-spacing 2px
+	font-size rem(18)
+.item-description__p
+	text-transform uppercase
+	font-size rem(16)
+	font-family LightFont
+	color #7b7b7b
+	letter-spacing 2px
+
+	
+
+.our-work-section__items-wrapper
+	margin-top 60px
+
+
+

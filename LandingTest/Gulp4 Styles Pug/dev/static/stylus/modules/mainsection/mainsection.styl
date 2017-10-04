@@ -1,0 +1,116 @@
+.mainsection
+	
+.slider-wrap
+	overflow hidden
+	display block
+	height 1120px
+
+
+.slide
+	text-align center
+	text-transform uppercase
+	color DarkColor
+	padding-top 250px
+	padding-bottom 30px
+	height 1120px
+	background-image url('/static/img/mainsection/mainsection.jpg')
+	background-size cover
+	background-repeat no-repeat
+	position relative
+.slide-wrap
+	float left
+	width 100%
+
+
+	
+
+.main-section__title
+	word-spacing 10px
+	font-family BoldFont
+	font-size rem(48)
+	letter-spacing 16px
+	display inline
+	white-space nowrap
+
+		
+	
+.main-section__text
+	font-family LightFont
+	font-size rem(24)
+	margin-bottom 170px
+.main-section__line
+	margin 40px 0
+	width 100%
+	height 9px
+	.square
+		margin: 0 7px
+		size(9px,9px)
+		background-color DarkColor
+		transform: rotate(45deg)
+	.line
+		relative(3px)
+		width 400px
+		height 2px
+		background-color DarkColor
+
+
+.main-section__slider-arrows
+	padding 0 350px
+
+	absolute(550px)
+	width 100%
+	height 80px
+	.left-arrow
+		z-index 2
+		background-image: url("/static/img/mainsection/left-arrow.png")
+	.right-arrow
+		z-index 2
+		background-image url("/static/img/mainsection/right-arrow.png")	
+.arrow
+	width 46px
+	cursor pointer
+.main-section__array-down
+	cursor pointer
+	z-index 2
+	absolute(950px)
+	margin-top 40px
+	size(50px)
+	background-color DarkColor
+	border-radius 100%
+	opacity .6
+	&:after
+		width 100%
+		height 100%
+		background-image url("/static/img/mainsection/down-arrow.png")
+		display block
+		content ''
+		relative(20px,,,17px)
+		background-repeat no-repeat
+.main-section__dots
+	z-index 2
+	absolute(790px)
+	height 20px
+	margin-top 75px
+	margin-bottom 40px
+	
+.owl-dots
+	z-index 3
+	absolute(800px)
+	height 20px
+	margin-top 75px
+	margin-bottom 40px
+	width 100%
+	left 50
+	.owl-dot
+		transition background-color .25s ease
+		cursor pointer
+		height 20px
+		width 20px
+		display inline-block
+		background-color DarkColor
+		margin 0 5px 0 5px
+		border-radius 100%
+		&.active
+			background-color Accent
+
+		

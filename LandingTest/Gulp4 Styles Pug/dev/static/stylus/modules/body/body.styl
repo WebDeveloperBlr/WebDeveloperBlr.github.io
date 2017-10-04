@@ -1,0 +1,100 @@
+//animation
+.fade-in
+	animation fade-in .5s 1 forwards
+	pointer-events auto!important
+	
+.fade-out
+	animation fade-out .5s 1 forwards
+	pointer-events none
+	
+//popup window	
+
+.modal-wrapper
+	background-color rgba(0,0,0,.6)
+	color #fff
+	text-align center
+	fixed(0,0,0,0)
+	z-index 999
+	pointer-events none
+	opacity 0
+	.modal-close
+		transform rotate(45deg)
+		font-size 80px
+		absolute(-25px,10px,,)
+		cursor pointer
+.modal-form-wrapper
+	text-align center
+	box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.75)
+	padding 40px
+	border-radius 6px
+	position relative
+	left 50%
+	top 50%
+	width 500px
+	height 600px
+	margin-top -300px
+	margin-left -250px
+	background-color rgba(40,54,61,.95)
+	h4,input,textarea
+		margin-top 15px
+	h4
+		color #cfcfcf
+		font-size 22px
+	input
+		size(170px,30px)
+	.button
+		margin 25px auto
+		border none
+		border-radius 2px
+		size(190px,35px)
+.modal-items
+	position absolute
+	top 50%
+	left 50%
+	transform translateY(-45%)
+	margin-left -165px
+
+
+//arrow to up
+.arrow-up
+	background-color rgba(255,255,255,.2)
+	padding 8px 0
+	fixed(,260px,100px,)
+	size(60px,60px)
+	z-index 990
+	border 3px solid Accent
+	border-radius 10px
+	opacity 0
+
+//right nav-dots
+.dots
+	fixed(45%,10px,,)
+	z-index 990
+	.dot
+		background-color #a5abae
+		margin-top 10px
+		size(15px,15px)
+
+
+@keyframes fade-in{
+	from{
+		opacity 0
+	}
+	to{
+		opacity 1
+	}
+}
+
+@keyframes fade-out{
+	from{
+		opacity 1
+	}
+	to{
+		opacity 0
+	}
+}
+
+	
+
+
+		

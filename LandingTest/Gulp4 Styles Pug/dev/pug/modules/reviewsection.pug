@@ -1,0 +1,47 @@
+section(id="fourthSection").review-section.section
+	div.flex-column
+		div.why-section__title
+			h2.title-h2 Оставьте отзыв
+			div.separator
+				img.separator-img(src="../static/img/general/separator.png")
+			p.content-p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et #[br] dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+		div.review-section__items-wrapper
+			div.flex-container.flex-center
+
+				div.flex-double-column
+					div.review-section__left-column-wrapper
+						
+						div.review-section__left-column-items
+							h4.review-section__h4 Наш адрес
+							p.review-section__p г.Минск, ул. Скрыганова, 6А, 4 этаж
+							h4.review-section__h4 Звоните
+							p.review-section__p +375 (29) 123-45-67,  +375 (33) 123-45-67
+							h4.review-section__h4 Пишите
+							p.review-section__p info@promo-webcom.by
+
+				div.flex-double-column
+					div.review-section__right-column-wrapper
+
+						form(method=post)
+							h4.review-section__h4 Ваше имя
+							input(type="text", placeholder="Иванов Иван")
+							h4.review-section__h4 Email
+							input(type="email", placeholder="example@gmail.com")
+							h4.review-section__h4 Ваша должность
+							input(type="text", placeholder="Должность")
+							h4.review-section__h4 Отзыв
+							textarea(placeholder="Ваше сообщение").textarea
+
+							div.flex-container.flex-center
+								div.flex-double-column
+									div.flex-container
+										div.button.orange-theme.review-section__right-column-photo-button
+											span.text +
+										h4.review-section__h4 Фото
+									h4.review-section__h4 Введите код с картинки
+									div.review-section__underline
+									img(src="../static/img/reviewsection/captcha.jpg").captcha
+								div.flex-double-column
+									div.flex-container.fullheight
+										input(type="submit" ,value="Отправить").button.orange-theme.review-section__submit-button
+
