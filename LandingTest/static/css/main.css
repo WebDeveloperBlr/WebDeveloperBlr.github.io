@@ -1,30 +1,30 @@
 @font-face {
   font-family: 'FiraSansCondensed-Bold';
-  src: url("LandingTest/static/fonts/FiraSansCondensed-Bold.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-Bold.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FiraSansCondensed-Light';
-  src: url("LandingTest/static/fonts/FiraSansCondensed-Light.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-Light.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FiraSansCondensed-Medium';
-  src: url("LandingTest/static/fonts/FiraSansCondensed-Medium.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-Medium.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FiraSansCondensed-Regular';
-  src: url("LandingTest/static/fonts/FiraSansCondensed-Regular.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-Regular.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FiraSansCondensed-SemiBold';
-  src: url("LandingTest/static/fonts/FiraSansCondensed-SemiBold.ttf") format('truetype');
+  src: url("/LandingTest/static/fonts/FiraSansCondensed-SemiBold.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -1072,12 +1072,12 @@ button {
 .main-section__slider-arrows .left-arrow {
   height: 100%;
   z-index: 2;
-  background-image: url("LandingTest/static/img/mainsection/left-arrow.png");
+  background-image: url("/LandingTest/static/img/mainsection/left-arrow.png");
 }
 .main-section__slider-arrows .right-arrow {
   height: 100%;
   z-index: 2;
-  background-image: url("LandingTest/static/img/mainsection/right-arrow.png");
+  background-image: url("/LandingTest/static/img/mainsection/right-arrow.png");
 }
 .arrow {
   width: 46px;
@@ -1098,7 +1098,7 @@ button {
 .main-section__array-down:after {
   width: 100%;
   height: 100%;
-  background-image: url("LandingTest/static/img/mainsection/down-arrow.png");
+  background-image: url("/LandingTest/static/img/mainsection/down-arrow.png");
   display: block;
   content: '';
   position: relative;
@@ -1238,7 +1238,7 @@ button {
   padding-top: 250px;
   padding-bottom: 30px;
   height: 1120px;
-  background-image: url("LandingTest/static/img/mainsection/mainsection.jpg");
+  background-image: url("/LandingTest/static/img/mainsection/mainsection.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -1395,7 +1395,7 @@ button {
   padding-top: 70px;
   border-top: 4px solid #ff8207;
   border-bottom: 2px solid #b5c4c4;
-  background-image: url("LandingTest/static/img/ourworksection/city.jpg");
+  background-image: url("/LandingTest/static/img/ourworksection/city.jpg");
   width: 100%;
   min-height: 975px;
   text-align: center;
@@ -1599,7 +1599,7 @@ button {
 .review-section__right-column-wrapper textarea {
   height: 23.4px;
   width: 540px;
-  background-image: url("LandingTest/static/img/reviewsection/line.png");
+  background-image: url("/LandingTest/static/img/reviewsection/line.png");
   border: none;
   margin-top: 15px;
   font-style: italic;
@@ -1607,7 +1607,7 @@ button {
   background-repeat: repeat-x;
 }
 .review-section__right-column-wrapper .textarea {
-  background-image: url("LandingTest/static/img/reviewsection/lines.png");
+  background-image: url("/LandingTest/static/img/reviewsection/lines.png");
   height: 100px;
   line-height: 20px;
   overflow: hidden;
@@ -1646,7 +1646,7 @@ button {
   font-family: 'FiraSansCondensed-Light', Arial, sans-serif;
 }
 .review-section__underline {
-  background: url("LandingTest/static/img/reviewsection/line.png");
+  background: url("/LandingTest/static/img/reviewsection/line.png");
   height: 2px;
   width: 300px;
 }
@@ -1748,7 +1748,7 @@ button {
   height: 250px;
   width: 100%;
   background-color: #28363d;
-  background-image: url("LandingTest/static/img/footer/background.jpg");
+  background-image: url("/LandingTest/static/img/footer/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
