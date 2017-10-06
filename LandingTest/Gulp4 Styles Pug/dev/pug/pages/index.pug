@@ -2,5 +2,13 @@ extends ../layout/main
 
 block variables
 	- var title = 'Главная страница'
-
-block content
+	- var reviewsectionheader = "И"
+block logo
+	div.logo
+		img.logo__img(src="../static/img/header/logo.png")
+block button-toggle
+	include ../blocks/button-toggle
+block slide
+	include ../blocks/slide
+block section-header
+	include ../blocks/headers

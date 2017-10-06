@@ -1,25 +1,16 @@
-section(id="firstSection").section.main-section.fp-auto-height-responsive
+section(id="firstSection").section.main-section
 	div.slider-wrap
-		div.flex-container.flex-column.nullheight
+		.flex-column
 			div.main-section__slider-arrows
-				div.flex-container.flex-space-between.fullheight
+				div.flex-container.flex-space-between
 					div.left-arrow.arrow.prev
 					div.right-arrow.arrow.next
-			a(href="#secondSection").main-section__array-down
-		div.slider.main-section.fullheight
-
+		
+		div.slider
 			each val in [1,2,3,4,5]
 				div.slide-wrap
-					div.slide
-						div.container
-							div.flex-container.flex-center.flex-column
-								h1.main-section__title= "Главный  заголовок " + val
-								div.main-section__line.flex-container.flex-center
-									div.line
-									div.square
-									div.line
-								h4.main-section__text  Lorem ipsum dolor sit amet, consectetur adipisicing #[br]elit, sed do eiusmod tempor incididunt#[br] ut labore et doloremagna aliqua. 
-								a(id="zayavka").button.orange-theme.main-section__button Оформить заявку
+					block slide
+		.flex-container
+			a(href="#secondSection").main-section__array-down
 				
-			
-			
+				

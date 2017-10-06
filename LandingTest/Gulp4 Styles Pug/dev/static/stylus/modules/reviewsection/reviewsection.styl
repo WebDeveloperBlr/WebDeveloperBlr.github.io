@@ -1,9 +1,12 @@
 .review-section
 	text-align center
-	padding 0 460px
+	padding 0
 	padding-bottom 100px
+	overflow hidden
+		
 .review-section__items-wrapper
 	margin-top 20px
+	padding 0 260px
 
 .review-section__left-column-wrapper
 	width 400px
@@ -19,14 +22,14 @@
 	input, textarea
 		height 23.4px
 		width 540px
-		background-image url("/LandingTest/static/img/reviewsection/line.png")
+		background-image url("/static/img/reviewsection/line.png")
 		border none
 		margin-top 15px
 		font-style italic
 		background-position bottom
-		background-repeat no-repeat
+		background-repeat repeat-x
 	.textarea
-		background-image url("/LandingTest/static/img/reviewsection/lines.png")
+		background-image url("/static/img/reviewsection/lines.png")
 		height 100px
 		line-height 20px
 		overflow: hidden
@@ -36,20 +39,18 @@
 		align-self flex-end
 		font-style normal
 		text-transform uppercase
-
 .review-section__underline
 	margin 25px 0 35px 0	
-			
-
 .review-section__h4
 	letter-spacing 1px
-	margin-top 15px
+	margin-top 20px
 	font-size rem(24)
 .review-section__p
 	color #b5c4c4
 	font-size rem(18)
 	margin-top 15px
 .review-section__right-column-photo-button
+	float left
 	padding-top 3px
 	margin-right 15px
 	size(50px,60px)
@@ -57,10 +58,65 @@
 		font-size rem(40)
 		font-family LightFont
 .review-section__underline
-	background url("/LandingTest/static/img/reviewsection/line.png")
+	background url("/static/img/reviewsection/line.png")
 	height 2px
 	width 300px
+	
+@media screen and (min-width : $tabletMobile-min) and (max-width : $tabletMobile-max)
+	.review-section
+		padding-bottom 40px
+	.review-section__items-wrapper
+		padding 0
+	.review-section__left-column-wrapper
+		width auto
+		margin 0 20px
 
+@media screen and (min-width : $mobile-min) and (max-width : $mobile-max = 767px)
+	.review-section__items-wrapper .flex-double-column
+		flex 1 100%
+	.review-section__items-wrapper 
+		>.flex-container
+			flex-direction column
+			>.flex-double-column
+				flex 1 100%
+				text-align center
+				&:first-child
+					order 2 
+			.review-section__left-column-wrapper, review-section__right-column-wrapper
+				float none
+				.review-section__left-column-items  
+					text-align center
+			.review-section__right-column-wrapper
+				form
+					margin-bottom 40px
+					text-align center
+					padding 0 20px
+					>.flex-container
+						flex-direction column
+						.review-section__h4
+							text-align left
+						.captcha
+							float left
+			.review-section__right-column-wrapper input, .review-section__right-column-wrapper textarea
+				width 100%
+
+@media screen and (min-width : $mobile-min) and (max-width : $iphone5-max = 568px)
+	.review-section
+		padding-bottom 40px
+	.review-section__items-wrapper
+		padding 0
+	.review-section__left-column-wrapper
+		width auto
+		margin 0 20px
+	.review-section__h4
+		margin-top 20px
+		font-size rem(19px)
+	.review-section__p
+		font-size rem(13)
+		margin-top 15px
+	.review-section__right-column-photo-button
+		transform scale(0.7)
+		margin-right 10px
 
 	
 	

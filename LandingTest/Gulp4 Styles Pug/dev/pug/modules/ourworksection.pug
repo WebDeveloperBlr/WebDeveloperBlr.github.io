@@ -1,13 +1,11 @@
+-var sectionheadercontent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+-var sectionheadertitle ="Наша работа"
 section(id="secondSection").our-work-section.section.fp-auto-height-responsive
 	div.flex-column
-		div.our-work-section__title
-			h2.title-h2 Наша работа
-			div.separator
-				img.separator-img(src="../static/img/general/separator.png")
-		p.content-p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et #[br] dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+		block section-header
 		div.our-work-section__items-wrapper
 			div.our-work-section__container
-				div.flex-container.flex-center.flex-row-wrap.flex-space-between
+				div.flex-container.flex-row-wrap
 					each val in [1,2,3,4,5,6]
 						a(href="").our-work-section__item
 							div.flex-container.fullheight

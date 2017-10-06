@@ -3,16 +3,9 @@
 	background-color DarkColor
 .orange-text
 	color Accent
-.title-h2
-	font-size rem(48)
-	color DarkColor
-	font-family LightFont
-	letter-spacing 5px
-	word-spacing 8px
-.content-p
-	color #8198a0
-	font-family BoldFont
-	
+
+
+
 .separator
 	.separator-img
 		text-align center
@@ -32,12 +25,14 @@
 //Flex styles	
 .flex-container
 	display flex
+	height 100%
+	justify-content center
 .flex-wrap
 	flex-wrap wrap
 .flex-row-wrap
 	flex-flow: row wrap
-.flex-center
-	justify-content center
+.flex
+	display flex
 .flex-space-between
 	justify-content space-between
 .flex-space-evenly
@@ -53,4 +48,9 @@
 .flex-triple-col
 	flex 1 33%
 
-
+@media (max-width : 1326px)
+	.container
+		padding 0 40px
+@media screen and (min-width : $mobile-min) and (max-width : $iphone5-max)
+	.container 
+		padding 0

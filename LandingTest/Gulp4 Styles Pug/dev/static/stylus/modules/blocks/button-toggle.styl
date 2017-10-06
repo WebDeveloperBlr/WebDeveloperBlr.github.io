@@ -1,0 +1,108 @@
+
+
+#toggle
+	display none
+.button.button-toggle 
+	color #fff
+	z-index 999
+	fixed(7%,5%,,)
+	display: none;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: $transition-duration + 0.1;
+	.toggle-lines
+		position relative
+		top 50%
+		animation animation-center-line ease-out .5s 
+		width 20px
+		height 2px
+		background-color #e6e6e6
+		&:before
+			animation rotation-before-alternate 1s ease-out 1 alternate
+			content ''
+			display block
+			relative(-7px,,,)
+			width 20px
+			height 2px
+			background-color #e6e6e6
+		&:after
+			animation rotation-after-alternate 1s ease-out 1 alternate
+			content ''
+			display block
+			relative(5px,,,)
+			width 20px
+			height 2px
+			background-color #e6e6e6
+	&:hover 
+		box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+
+#toggle:checked
+	& ~ .toggle-container
+			.button.button-toggle
+				cursor: pointer;
+				transition: all .5s ease
+				.toggle-lines
+					position relative
+					top 0px
+					height 0px
+					&:before
+						top 9px
+						transform rotate(-45deg)
+						animation rotation-second 1s ease-out 1 alternate
+					&:after
+						top 7px
+						transform rotate(45deg)
+						animation rotation 1s ease-out 1 alternate
+				&:hover
+					box-shadow: 0 0 0 8px rgba(255, 130, 7, 0.1), inset 0 0 0 20px rgba(255, 130, 7, 0.1)
+					
+@keyframes rotation{
+	from{
+		transform rotate(0deg)
+	}
+
+	to{
+		transform rotate(45deg)
+	}
+}
+
+@keyframes rotation-second{
+	from{
+		transform rotate(0deg)
+	}
+	to{
+		transform rotate(-45deg)
+	}
+}
+
+
+@keyframes rotation-after-alternate{
+	from{
+		transform rotate(45deg)
+		top 0px
+		
+	}
+	to{
+		transform rotate(0)
+		top 5px
+	}
+}
+
+@keyframes rotation-before-alternate{
+	from{
+		transform rotate(-45deg)
+		top 0px
+	}
+	to{
+		transform rotate(0)
+		top -7px
+		
+	}
+}
+
+@media screen and (min-width : $tabletMobile-min) and (max-width : $tabletMobile-max)
+	.button.button-toggle 
+		display block

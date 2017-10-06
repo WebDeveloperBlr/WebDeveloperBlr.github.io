@@ -1,17 +1,21 @@
 .our-work-section
+	overflow hidden
+	padding-top 70px
 	border-top 4px solid Accent
 	border-bottom 2px solid #b5c4c4
-	background-image url("../static/img/ourworksection/city.jpg")
+	background-image url("/static/img/ourworksection/city.jpg")
 	width 100%
 	min-height 975px
 	text-align center
 	background-size cover
 	background-repeat no-repeat
-div.our-work-section__title 
-	margin-top 60px
+	background-position-x -5px
+
 .our-work-section__container
-	padding 0 250px
+	min-width 70%
 .our-work-section__item
+	min-width 460px
+	max-width 460px
 	margin 0 10px
 	overflow hidden
 	height 320px
@@ -28,7 +32,6 @@ div.our-work-section__title
 			visibility visible
 			bottom 0px
 .item-description
-	
 	visibility hidden
 	transition .5s
 	padding 15px 55px
@@ -59,5 +62,29 @@ div.our-work-section__title
 .our-work-section__items-wrapper
 	margin-top 60px
 
-
-
+@media screen and (min-width : $tabletMobile-min) and (max-width : $tabletMobile-max)
+	.our-work-section
+		padding 40px 0
+	.our-work-section__items-wrapper
+		margin-top 20px
+	.item-description
+		padding 10px
+		height auto
+@media screen and (min-width : $mobile-min) and (max-width : $iphone5-max = 568px)
+	.our-work-section
+		padding 30px 0
+	.our-work-section__items-wrapper
+		margin-top 15px
+	.our-work-section__container
+		min-width 100%
+	.our-work-section__item
+		min-width 97%
+		max-width 97%
+		height 260px
+	.item-description
+		padding 15px 55px
+	.item-description__h4
+		font-size rem(14)
+	.item-description__p
+		font-size rem(10)
+		letter-spacing 2px

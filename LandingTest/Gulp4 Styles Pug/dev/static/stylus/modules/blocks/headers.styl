@@ -1,0 +1,36 @@
+//block headers.pug (headers of sections)
+.section__title
+	padding 0 0px
+	text-align center
+.title-h2
+	font-size rem(48)
+	color DarkColor
+	font-family LightFont
+	letter-spacing 5px
+	word-spacing 8px
+.content-p
+	max-width 700px
+	color #8198a0
+	font-family BoldFont
+	margin 0 auto
+//end of block headers.pug (headers of sections)
+@media screen and (min-width : $tabletMobile-min) and (max-width : $tabletMobile-max)
+	.section__title
+		margin-top 0px
+	.title-h2
+		font-size rem(38)
+		letter-spacing 5px
+		word-spacing 8px
+	.content-p
+		font-size rem(15)
+@media screen and (min-width : $mobile-min) and (max-width : $iphone5-max = 568px)
+	.section__title
+		margin-top 0px
+	.title-h2
+		font-size rem(25)
+		letter-spacing 3px
+		word-spacing 5px
+	.separator
+		margin 6px 0px
+	.content-p
+		font-size rem(12)

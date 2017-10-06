@@ -5,7 +5,7 @@
 	height 250px
 	width 100%
 	background-color DarkColor
-	background-image url("/LandingTest/static/img/footer/background.jpg") 
+	background-image url("/static/img/footer/background.jpg") 
 	background-repeat no-repeat 
 	background-size cover
 	.separator 
@@ -32,5 +32,42 @@
 	.copyrights-text
 		margin-top 20px
 		letter-spacing 3px
-
-
+@media screen and (min-width : $tabletMobile-min) and (max-width : $tabletMobile-max)
+	.footer
+		margin-top 30px
+@media screen and (min-width : $mobile-min) and (max-width : $mobile-max = 767px)
+	.footer__h4
+		margin-bottom 10px
+		margin-top 40px
+	.footer
+		padding-top 10px
+		height auto
+		.logo
+			margin-top 40px
+		.copyrights
+			margin-top 30px
+		.separator
+			margin 0
+		>.container
+			>.flex-container
+				text-align center
+				align-items center
+				flex-direction column
+				justify-content flex-start
+				.flex-triple-col:first-child
+					order 3
+				.flex-triple-col
+					flex 1 100%
+					order 1
+					.footer__right-col
+						text-align center
+@media screen and (min-width : $mobile-min) and (max-width : $iphone5-max = 568px)
+	.footer__h4
+		margin-bottom 10px
+		margin-top 40px
+	footer
+		.logo
+				margin-top 40px
+	.copyrights
+		white-space nowrap
+		font-size 13px

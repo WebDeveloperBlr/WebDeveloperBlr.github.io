@@ -1,0 +1,10 @@
+{
+	"ourworksection":	{
+		"header" : "Наша работа",
+		"content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et #[br] dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+	},
+	"reviewsection":	{
+		"header" : "Оставьте отзыв",
+		"content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et #[br] dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+	}
+}

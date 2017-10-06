@@ -10,6 +10,7 @@
 //popup window	
 
 .modal-wrapper
+	overflow hidden
 	background-color rgba(0,0,0,.6)
 	color #fff
 	text-align center
@@ -93,7 +94,47 @@
 		opacity 0
 	}
 }
+@media screen and (min-width : $tabletMobile-min) and (max-width : $tabletMobile-max)
+	.arrow-up
+		right 20px
+		bottom 20px
+@media screen and (min-width : $mobile-min) and (max-width : $mobile-max = 767px)
+	.arrow-up
+		right 20px
+		bottom 20px
+	.modal-form-wrapper
+		size(320px, 500px)
+		margin-left -160px
+		margin-top -250px
+		padding 20px
+		.modal-title
+			font-size 17px
+		.modal-items
+			margin-left -110px
+			h4 
+				font-size 15px				
 
+@media screen and (min-width : $mobile-min) and (max-width : $iphone5-max = 568px)
+	.arrow-up
+		right 20px
+		bottom 20px
+	.modal-form-wrapper
+		size(320px, 500px)
+		margin-left -160px
+		margin-top -250px
+		padding 20px
+		.modal-title
+			font-size 17px
+		.modal-items
+			margin-left -110px
+			h4 
+				font-size 15px
+	.dots
+		fixed(45%,10px,,)
+		.dot
+			background-color #a5abae
+			margin-top 20px
+			size(12px,12px)
 	
 
 

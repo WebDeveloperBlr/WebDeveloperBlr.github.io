@@ -1,12 +1,9 @@
+-var sectionheadertitle = "Оставьте отзыв"
 section(id="fourthSection").review-section.section
 	div.flex-column
-		div.why-section__title
-			h2.title-h2 Оставьте отзыв
-			div.separator
-				img.separator-img(src="../static/img/general/separator.png")
-			p.content-p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et #[br] dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+		block section-header
 		div.review-section__items-wrapper
-			div.flex-container.flex-center
+			div.flex-container
 
 				div.flex-double-column
 					div.review-section__left-column-wrapper
@@ -32,16 +29,16 @@ section(id="fourthSection").review-section.section
 							h4.review-section__h4 Отзыв
 							textarea(placeholder="Ваше сообщение").textarea
 
-							div.flex-container.flex-center
+							div.flex-container
 								div.flex-double-column
-									div.flex-container
-										div.button.orange-theme.review-section__right-column-photo-button
-											span.text +
-										h4.review-section__h4 Фото
-									h4.review-section__h4 Введите код с картинки
+									div.button.orange-theme.review-section__right-column-photo-button
+										span.text +
+									h4.review-section__h4 Фото
+									div
+										h4.review-section__h4 Введите код с картинки
 									div.review-section__underline
 									img(src="../static/img/reviewsection/captcha.jpg").captcha
 								div.flex-double-column
-									div.flex-container.fullheight
+									div.flex.fullheight
 										input(type="submit" ,value="Отправить").button.orange-theme.review-section__submit-button
 
