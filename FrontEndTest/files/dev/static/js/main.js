@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#table').hover(function(){
 
-    		$('.items-wrapper').fadeOut("slow");
+    		$('.items-wrapper').css('display','none');
     		$('.table-wrapper').fadeIn("slow");
     });
 });
