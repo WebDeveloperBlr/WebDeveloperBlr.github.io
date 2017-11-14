@@ -1,0 +1,139 @@
+.main-section
+	font-family Arial, sans-serif
+	width 100%
+	position fixed
+	left 0
+	bottom 0
+	height 100%
+	overflow auto
+	overflow-x hidden
+	padding 0
+.align-center
+	align-items center
+	text-align center
+.flex-center
+	display flex
+	justify-content center 
+	text-align center
+.flex-space-between
+	display flex
+	justify-content space-between 
+	text-align center
+.flex-column
+	height 100%
+	display flex
+	flex-direction column
+	justify-content space-between
+
+.flex-wrap
+	flex-wrap wrap
+.main-section-wrapper
+	
+	border-radius rem(10)
+	margin auto
+	width 70%
+	min-height 70%
+	@media (max-width: 700px)
+		width 100%
+
+.item
+	flex-grow 1
+	margin rem(5)
+	border rem(2) solid #e6e6e6
+	text-align left
+	background-color #fff
+	padding rem(20)
+	flex-basis 23%
+	@media (max-width: 400px)
+		flex-basis 47%
+
+
+	
+.item-id
+
+	text-transform uppercase
+	font-size rem(10)
+	font-weight bold
+	color #999999
+.item-img
+	margin rem(30) auto
+	max-width 100%
+.item-h2
+	color #3b88b8
+	font-size rem(17)
+	margin rem(20) auto rem(5) auto
+.item-description
+	font-size rem(11)
+	color #505050
+.item-bottom-content
+	width 100%
+	text-align center
+.button
+	display block
+	max-width 100%
+	font-size rem(12)	
+	padding rem(5)
+	margin rem(10) 0
+	
+.button-red
+	color #d44444
+	border rem(2) solid #d44444
+	border-radius rem(2)
+	transition all .5s ease
+	&:hover
+		border rem(2) solid #d44444
+		background-color #d44444
+		color #fff
+.button-clear
+	max-width 100%
+	border none
+	color black
+	font-weight bold
+.button-small
+	margin-left rem(10)
+
+.nav-bar-wrapper
+	margin rem(20) rem(5)
+	font-size rem(14)
+.navbar>.nav-list
+	padding rem(10) 0
+	background-color #f2f2f2
+	a 
+		margin rem(10)
+		color #6899c2
+.nav-list
+	position relative
+	&:hover
+		&>.nav-drop 
+			top 0
+.navbar > .nav-list
+	&:hover
+		&>.nav-drop
+			top 100%
+
+.nav-drop
+	z-index 15 
+	padding 0
+	border-radius rem(2)
+	font-size rem(12)
+	background-color #fff
+	top -9999px
+	width 100%
+	position absolute
+	opacity 0
+	transition opacity .5s ease
+	a 
+		color #fff
+	.nav-drop
+		left 100%
+	>li 
+		padding rem(10)
+		border-bottom 1px solid #f2f2f2
+		
+.nav-list:hover > .nav-drop
+	opacity 1
+.navbar li
+	&:hover
+		background-color #e6e6e6
+		
+

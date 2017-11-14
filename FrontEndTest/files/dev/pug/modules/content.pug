@@ -1,0 +1,49 @@
+- var h2array = [" Lorem ipsum dolor sit amet, consectetur.", " Lorem ipsum dolor sit amet, consectetur adipisicing elit."," Lorem ipsum dolor sit."]
+
+section.main-section.flex-center
+	.main-section-wrapper
+		.flex-column
+			.nav-bar-wrapper
+				ul.navbar.flex-space-between
+					li.nav-list
+						a(href="") Каталог оборудования
+						ul.nav-drop
+							- for (var i = 0; i<5; i++){
+								li.nav-list
+									a(href="") Уровень 2
+									ul.nav-drop
+										- for(j = 0;j<5;j++){
+											li.nav-list
+												a(href="") Уровень 3
+												ul.nav-drop
+													- for(k = 0;k<5;k++){
+														li
+															a(href="") Уровень 4
+													- }
+										- }
+							- }
+					li.nav-list
+						a(href="" id="table") Таблица
+			.flex-space-between.flex-wrap.items-wrapper
+				- for(var i=0;i<8;i++){
+					.item
+						.flex-column
+							.item-top-content
+								p.item-id f10023-td
+								img(src="/static/img/content/bolgar.jpg", alt="").item-img
+								h2().title.item-h2= h2array[h2array[i]?i:1]
+								p.item-description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus hic, voluptates omnis.
+							.item-bottom-content
+								- if(i==0||i==3||i==6){
+									.button.button-clear Цена по запросу
+								- } else if (i==1||i==4||i==7){
+									.flex-space-between.align-center
+										p(id='price').cart-text 327890руб.
+										a(href="").button.button-red.button-small В корзину
+								- } else if(i==2||i==5||i==8){
+									a(href="").button.button-red Запросить цену
+								- }
+				- }
+				
+			include ../modules/table
+		
