@@ -1,6 +1,52 @@
 
 $(document).ready(function () {
 
+var header = "Разработка сайтов, лендингов, верстка";
+var arrheader = header.split("");
+var counter=0;
+
+setTimeout(function(){
+	loop = setInterval(function(){
+			$('.header-border .h1').append(arrheader[counter]);
+			if(counter=== arrheader.length){
+				clearInterval(loop);
+			}
+			counter ++;
+		},70);
+},1900);
+
+$(window).on('scroll',function(event){
+	if($(window).scrollTop()>=$('.WhyMeSection').scrollTop()){
+		$('.key-site-wrapper').addClass("flow");	
+	}
+	if($(window).scrollTop()>=$('.MyProjectsSection').scrollTop()+300){
+		$('.outer-items-wrapper').addClass("rotate-plus");	
+		$('.inner-items-wrapper').addClass("rotate-minus");	
+	}
+});
+	
+
+
+
+
+
+$('.inner-items-wrapper .item1 a, .inner-items-wrapper .item2 a').on('mouseenter',function(event){
+	$('.plank-portfolio').addClass("plank-right");
+});
+$('.inner-items-wrapper .item1 a, .inner-items-wrapper .item2 a').on('mouseleave',function(event){
+	$('.plank-portfolio').removeClass("plank-right");
+});
+$('.inner-items-wrapper .item4 a, .inner-items-wrapper .item3 a').on('mouseenter',function(event){
+	$('.plank-portfolio').addClass("plank-left");
+});
+$('.inner-items-wrapper .item4 a, .inner-items-wrapper .item3 a').on('mouseleave',function(event){
+	$('.plank-portfolio').removeClass("plank-left");
+});
+
+
+
+
+/// paralax 
 
 	var mediaQuery = window.getComputedStyle(document.querySelector('.cd-background-wrapper'), '::before').getPropertyValue('content').replace(/"/g, ''),
 		//define store some initial variables
@@ -12,7 +58,7 @@ $(document).ready(function () {
 		aspectRatio;
 
 
-	
+
 	//detect mouse movement
 	$('.opacity-layer').on('mousemove', function(event){
 		if( mediaQuery == 'web' && $('html').hasClass('preserve-3d') ) {
@@ -24,25 +70,10 @@ $(document).ready(function () {
 
 
 
-	function initBackground() {
-		var wrapperHeight = Math.ceil(halfWindowW*2/aspectRatio), 
-			proportions = ( maxRotationY > maxRotationX ) ? 1.1/(Math.sin(Math.PI / 2 - maxRotationY*Math.PI/180)) : 1.1/(Math.sin(Math.PI / 2 - maxRotationX*Math.PI/180)),
-			newImageWidth = Math.ceil(halfWindowW*2*proportions),
-			newImageHeight = Math.ceil(newImageWidth/aspectRatio),
-			newLeft = halfWindowW - newImageWidth/2,
-			newTop = (wrapperHeight - newImageHeight)/2;
 
-		//set an height for the .cd-background-wrapper
-		$('.cd-background-wrapper').css({
-			'height' : wrapperHeight,
-		});
-		//set dimentions and position of the .cd-background-wrapper		
-		$('.cd-floating-background').addClass('is-absolute').css({
-			'left' : newLeft,
-			'top' : newTop,
-			'width' : newImageWidth,
-		});
-	}
+
+
+
 
 	function moveBackground(event) {
 		var rotateY = ((-event.pageX+halfWindowW)/halfWindowW)*maxRotationY,
@@ -64,8 +95,7 @@ $(document).ready(function () {
 	}
 });
 
-/* 	Detect "transform-style: preserve-3d" support, or update csstransforms3d for IE10 ? #762
-	https://github.com/Modernizr/Modernizr/issues/762 */
+
 (function getPerspective(){
   var element = document.createElement('p'),
       html = document.getElementsByTagName('html')[0],
@@ -98,5 +128,5 @@ $(document).ready(function () {
     }
     document.body.removeChild(element);
 
-    
+
 })();
