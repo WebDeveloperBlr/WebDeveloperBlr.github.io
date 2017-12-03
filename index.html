@@ -5,31 +5,31 @@
     <title>Главная страница</title>
     <meta http-equiv="X-UA-Compatible" content="IE = edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="keywords" content="Разработка сайтов, лендингов, корпоративные сайты">
+    <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="static/css/main.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
     <body>
-      <div class="wrapper">
-        <header class="header">
+      <div class="wrapper" id="fullpage">
+        <header class="header section" data-anchor="header">
           <div class="fade-from-dark"></div>
-          <div class="header-container">
-            <div class="flex-column">
+          <div class="header-container flex-column">
+            <div class="header-wrap">
               <div class="logo come-from-top"><img src="static/img/content/header/logo.png" alt="logo"></div>
               <div class="header-border flex-column flex-center fade-in">
-                <h1 class="h1"></h1><a class="button button-main button-fill-theme flex-center">
+                <h1 class="h1"></h1><a class="button button-main button-fill-theme flex-center" href="mailto:kdv3505381@gmail.com">
                   <p>Заказать</p></a>
               </div>
               <div class="nav fade-in">
-                <ul class="navbar flex-space-between">
-                  <li class="nav-item"><a class="nav-link" href="#">Мои проекты </a></li><span>-</span>
-                  <li class="nav-item"><a class="nav-link" href="#">Обо мне </a></li><span>-</span>
-                  <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                <ul class="navbar flex-center">
+                  <li class="nav-item"><a class="nav-link" id="myProjectsLink">Мои проекты </a></li><span>-</span>
+                  <li class="nav-item"><a class="nav-link" id="whyMeLink">Обо мне </a></li><span>-</span>
+                  <li class="nav-item"><a class="nav-link" id="contactsLink">Контакты</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </header>
-        <section class="WhyMeSection">
+        <section class="WhyMeSection section" data-anchor="whyme">
           <div class="container">
             <div class="key-site-wrapper flex-start">
               <div class="left-col flex-column">
@@ -105,7 +105,7 @@
             </div>
           </div>
         </section>
-        <section class="MyProjectsSection">
+        <section class="MyProjectsSection section fp-no-scroll" data-anchors="myProjects">
           <div class="flex-column">
             <div class="outer-items-wrapper">
               <div class="item item1"><a href="#"><img src="static/img/content/MyProjects/item 2.jpg" alt="item 1"></a></div>
@@ -115,7 +115,7 @@
             </div>
             <div class="inner-items-wrapper flex-center">
               <div class="inner-items-wrapper-container">
-                <div class="item item1"><a href="/LandingTest"><img class="img" src="static/img/content/MyProjects/item 1.jpg" alt="item 1">
+                <div class="item item1"><a href="#inner-1-2"><img class="img" src="static/img/content/MyProjects/item 1.jpg" alt="item 1">
                     <div class="inner-wrap">
                       <h4>Мой проект</h4>
                       <div class="line"></div>
@@ -162,7 +162,7 @@
             </div>
           </div>
         </section>
-        <section class="idea-section">
+        <section class="idea-section section" data-anchor="idea">
           <div class="right-banner flex-column">
             <div class="wrapper">
               <h2 class="h2">Самые сочные и <br>оригинальные <br>идеи</h2>
@@ -176,7 +176,7 @@
             </div>
           </div>
         </section>
-        <section class="AboutMeSection">
+        <section class="AboutMeSection section" data-anchors="aboutMe">
           <div class="wrapper">
             <div class="container flex-column">
               <div class="first-row-wrapper">
@@ -184,19 +184,14 @@
                   <div class="first-img-wrapper"><img src="static/img/content/AboutMe/tie.jpg" alt="About me"></div>
                   <div class="about-me-wrapper">
                     <div class="h4-wrapper">
-                      <h4 class="h4">О себе</h4>
+                      <h4 class="h4">О нас</h4>
                     </div>
                     <div class="content-wrapper">
+                      <p class="content">Разработка сайтов - задача непростая. Чтобы каждый проект был уникальным мы «вкладываем душу» и идею, которая может стать вашем фирменным стилем. </p>
                       <p class="content">
-                        Занимаюсь веб разработкой с 2016 года. Над 
-                        проектами начал работать в начале 2017. 
+                        Неимение большого опыта в веб-разработке мы компенсируем своим отношением к клиенту и креативностью.
+                        
                       </p>
-                      <p class="content">
-                        Занимаюсь как версткой отдельных страниц, 
-                        так и разработкой лендингов, корпоративных сайтов 
-                        и сайтов под ключ. 
-                      </p>
-                      <p class="content">Работаю по предоплате 50%.</p>
                     </div>
                   </div>
                 </div>
@@ -213,7 +208,7 @@
                         <input type="text" required>
                         <label class="content">Введите ваше сообщение/вопрос</label>
                         <textarea required></textarea>
-                        <input class="button" type="submit" value="ОТПРАВИТЬ">
+                        <input class="button black-button" type="submit" value="ОТПРАВИТЬ">
                       </form>
                     </div>
                   </div>
@@ -223,7 +218,7 @@
             </div>
           </div>
         </section>
-        <footer class="footer">
+        <footer class="footer section fp-no-scroll fp-auto-height" id="contacts">
           <div class="footer-wrapper">
             <div class="container">
               <div class="flex-space-between">
@@ -243,9 +238,8 @@
                     <div class="flex-column">
                       <div class="footer-contact flex-center"><i class="fa fa-mobile" aria-hidden="true"></i>
                         <p>+375 25 935 18 03</p>
-                      </div>
-                      <div class="button footer-button">сделать заказ</div>
-                      <div class="footer-logo"><img src="static/img/content/footer/Logo-footer.png"></div>
+                      </div><a class="button footer-button black-button" href="mailto:kdv3505381@gmail.com">сделать заказ</a>
+                      <div class="footer-logo"><img src="static/img/content/footer/logo-footer.png"></div>
                     </div>
                   </div>
                 </div>
@@ -262,11 +256,12 @@
           </div>
           <div class="copyrights">
             <div class="container flex-center">
-              <h4 class="h4">© 2017  WebDeveloperBlr. All Rights Reserved.</h4>
+              <h4 class="h4">© 2017  WebDeveloperBlr.</h4>
             </div>
           </div>
         </footer>
       </div>
+      <div class="arrow-up flex-center"><i class="fa fa-angle-up"></i></div>
       <script src="static/js/jquery.js"></script>
       <script src="static/js/libs.min.js"></script>
       <script src="static/js/main.js"></script>
