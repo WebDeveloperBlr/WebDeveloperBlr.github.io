@@ -22,6 +22,7 @@ $(document).ready(function () {
 			$('#fullpage').fullpage({
 				scrollOverflow:true,
 				scrollingSpeed: 1500,
+				bigSectionsDestination: "top",
 				anchors:['header','whyMe','myProjects','idea','aboutMe','footer'],
 				onLeave: function(index, nextIndex, direction){
 					var loadedSection = $(this);
