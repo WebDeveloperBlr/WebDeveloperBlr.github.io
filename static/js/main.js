@@ -1,9 +1,9 @@
 
 $(document).ready(function () {
 
+
 	var widthScreen = screen.width,
 	    heightScreen = screen.height;
-	console.log(widthScreen);
 	setTimeout(function(){
 		var header = "Разработка сайтов, лендингов, верстка";
 		var arrheader = header.split("");
@@ -16,14 +16,43 @@ $(document).ready(function () {
 				counter ++;
 			},70);
 	},1900);
+	
+	 if (widthScreen<1170) {
+	   alert("ok");
+		$('#myProjectsLink').click(function(){
+			alert("ok");
+				$('html','body').animate({
+					scrollTop: $('#myProjectsSection').offset().top
+				}, 2000);
+				$('.arrow-up').addClass("dark-theme");
+				return false;
+			});
+			$('#contactsLink').click(function(){
+				$.fn.fullpage.moveTo(5);
+				$('.arrow-up').addClass("light-theme");
+				return false;
+			});
+			$('.arrow-up').click(function(){
+				$.fn.fullpage.moveTo(1);
+				$('.arrow-up').removeClass("dark-theme light-theme");
+			});
+			$('#whyMeLink').click(function(){
+				$.fn.fullpage.moveTo(4);
+				$('.arrow-up').removeClass("light-theme");
+				$('.arrow-up').addClass("dark-theme");
+				return false;
+			});
+	 }
+
+		
 
 	if(widthScreen>1120){
-
+/*  fullpage js
 			$('#fullpage').fullpage({
 				scrollOverflow:true,
 				scrollingSpeed: 1500,
 				bigSectionsDestination: "top",
-				anchors:['header','whyMe','myProjects','idea','aboutMe','footer'],
+				anchors:['header','whyMe','myProjects','aboutMe','footer'],
 				onLeave: function(index, nextIndex, direction){
 					var loadedSection = $(this);
 
@@ -50,7 +79,7 @@ $(document).ready(function () {
 				return false;
 			});
 			$('#contactsLink').click(function(){
-				$.fn.fullpage.moveTo(6);
+				$.fn.fullpage.moveTo(5);
 				$('.arrow-up').addClass("light-theme");
 				return false;
 			});
@@ -59,11 +88,11 @@ $(document).ready(function () {
 				$('.arrow-up').removeClass("dark-theme light-theme");
 			});
 			$('#whyMeLink').click(function(){
-				$.fn.fullpage.moveTo(5);
+				$.fn.fullpage.moveTo(4);
 				$('.arrow-up').removeClass("light-theme");
 				$('.arrow-up').addClass("dark-theme");
 				return false;
-			});
+			});*/
 
 		$('.inner-items-wrapper .item1 a, .inner-items-wrapper .item2 a').on('mouseenter',function(event){
 				$('.plank-portfolio').addClass("plank-right");
