@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <title>Главная страница</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+<body>
+<div class="body-wrapper">
+  <header class="header flex-vertical-center">
+    <div class="header__wrapper fullwidth flex-center">
+      <form class="header__header-form flex-vertical-center" action="#">
+        <h4 class="header-4">Вход</h4>
+        <div class="header-form__inputs-wrapper">
+          <div class="header-form__text">Логин</div>
+          <div class="header-form__field-wrapper">
+            <input class="header-form__input" type="text" id="login" required>
+            <label class="header-form__label" for="login">Пожалуйста, введите логин :)</label>
+          </div>
+          <div class="header-form__text">Эл. почта</div>
+          <div class="header-form__field-wrapper">
+            <input class="header-form__input" type="email" id="email" required>
+            <label class="header-form__label active" for="email">Пожалуйста, введите адрес электронной почты :)</label>
+          </div>
+          <div class="header-form__text">Пароль</div>
+          <div class="header-form__field-wrapper">
+            <input class="header-form__input" type="password" id="password" required>
+            <label class="header-form__label" for="password">Пожалуйста, введите пароль :)</label>
+          </div>
+        </div>
+        <input class="button header-form__submit" type="submit" value="Войти">
+      </form>
+    </div>
+  </header>
+</div>
+</body>
+</html>
