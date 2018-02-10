@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-  <meta charset="utf-8">
-  <title>Главная страница</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="keywords" content="">
-  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="static/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
 </head>
 <body>
-<div class="body-wrapper">
-  <header class="header flex-vertical-center">
-    <div class="header__wrapper fullwidth flex-center">
-      <form class="header__header-form flex-vertical-center" action="#">
+<header class="header">
+    <form class="header__header-form" action="#">
         <h4 class="header-4">Вход</h4>
         <div class="header-form__inputs-wrapper">
-          <div class="header-form__text">Логин</div>
-          <div class="header-form__field-wrapper">
-            <input class="header-form__input" type="text" id="login" required>
-            <label class="header-form__label" for="login">Пожалуйста, введите логин :)</label>
-          </div>
-          <div class="header-form__text">Эл. почта</div>
-          <div class="header-form__field-wrapper">
-            <input class="header-form__input" type="email" id="email" required>
-            <label class="header-form__label active" for="email">Пожалуйста, введите адрес электронной почты :)</label>
-          </div>
-          <div class="header-form__text">Пароль</div>
-          <div class="header-form__field-wrapper">
-            <input class="header-form__input" type="password" id="password" required>
-            <label class="header-form__label" for="password">Пожалуйста, введите пароль :)</label>
-          </div>
+            <label class="header-form__label" for="login">Логин</label>
+            <div class="header-form__field-wrapper">
+                <input class="header-form__input" type="text" id="login" placeholder="Логин" required>
+                <div class="header-form__text">Пожалуйста, введите логин :)</div>
+            </div>
+            <label class="header-form__label" for="email">Эл. почта</label>
+            <div class="header-form__field-wrapper">
+                <input class="header-form__input" type="email" id="email" placeholder="Email" required>
+                <div class="header-form__text">Пожалуйста, введите адрес электронной почты :)</div>
+            </div>
+            <label class="header-form__label" for="password">Пароль</label>
+            <div class="header-form__field-wrapper">
+                <input class="header-form__input" type="password" id="password" placeholder="Пароль" required>
+                <div class="header-form__text">Пожалуйста, введите пароль :)</div>
+            </div>
         </div>
-        <input class="button header-form__submit" type="submit" value="Войти">
-      </form>
-    </div>
-  </header>
-</div>
+        <input class="button header-form__submit" type="submit" value="Войти"><a
+            class="header-form__no-account-link header-link" href="#">Нет профиля :(</a>
+    </form>
+</header>
 </body>
 </html>
