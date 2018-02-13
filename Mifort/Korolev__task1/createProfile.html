@@ -11,7 +11,8 @@
 </head>
 <body>
 <header class="header">
-    <form class="createProfile__form header-form-style" action=""><a class="createProfile__backToMain-link" href="index.html">
+    <form class="createProfile__form header-form-style" action=""><a class="createProfile__backToMain-link"
+                                                                     href="index.html">
         <svg class="icon icon-ARROW ">
             <use xlink:href="static/img/svg/symbol/sprite.svg#ARROW"></use>
         </svg>
@@ -19,7 +20,8 @@
         <h4 class="header-4">Создание профиля</h4>
         <div class="createProfile__edit-block">
             <div class="createProfile__edit-block__left-col-wrapper">
-                <div class="createProfile__img-wrapper"><img class="createProfile__img"></div>
+                <div class="createProfile__img-wrapper"><img class="createProfile__img" id="profilePreview"></div>
+                <span class="createProfile__filename-preview" id="createProfile__filename-preview"></span>
                 <div class="createProfile__img-button-wrapper">
                     <label class="button createProfile__img-label" for="photo">Загрузить
                         <input class="createProfile__input createProfile__input--invisible" type="file"
@@ -30,11 +32,15 @@
             <div class="createProfile__edit-block__right-col-wrapper">
                 <div class="createProfile__field-wrapper">
                     <label class="createProfile__label" for="name">Ваше имя</label>
-                    <input class="createProfile__input input--valid-check" type="text" id="name" minlength="2" required><span></span>
+                    <input class="createProfile__input input--valid-check" type="text" pattern="[A-Za-z]" id="name"
+                           minlength="2" required>
+                    // span for view on success symbol and colorize input border
+                    <span></span>
                 </div>
                 <div class="createProfile__field-wrapper">
                     <label class="createProfile__label" for="surname">Ваша фамилия</label>
-                    <input class="createProfile__input input--valid-check" type="text" minlength="3" id="surname"
+                    <input class="createProfile__input input--valid-check" type="text" pattern="[A-Za-z]" minlength="3"
+                           id="surname"
                            required><span></span>
                 </div>
                 <div class="createProfile__field-wrapper">
@@ -48,5 +54,6 @@
         <input class="button createProfile__submit button--success" type="submit" value="Создать">
     </form>
 </header>
+<script src="static/js/main.js"></script>
 </body>
 </html>
