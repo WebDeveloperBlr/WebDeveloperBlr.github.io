@@ -6,73 +6,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE = edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" href="../../../OpenServer/domains/Mifort--firstTask/build/assets/css/main.css">
 </head>
 <body>
-<section class="HR-app-section">
-    <div class="HR-app-section__sidebar">
-        <div class="HR-app-section__sidebar-wrapper">
-            <h1 class="HR-app-section__sidebar-header">hr app</h1>
-            <ul class="HR-app-section__sidebar-list">
-                <li class="HR-app-section__sidebar-list-item"><a class="HR-app-section__sidebar-item-link" href="#">Interview</a>
+<section class="hr-app-section">
+    <div class="hr-app-section__sidebar">
+        <svg class="icon icon-CLOSE ">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#CLOSE"></use>
+        </svg>
+        <div class="hr-app-section__sidebar-wrapper">
+            <h1 class="hr-app-section__sidebar-header">hr app</h1>
+            <ul class="hr-app-section__sidebar-list">
+                <li class="hr-app-section__sidebar-list-item"><a class="hr-app-section__sidebar-item-link" href="#">Interview</a>
                 </li>
-                <li class="HR-app-section__sidebar-list-item active"><a class="HR-app-section__sidebar-item-link"
+                <li class="hr-app-section__sidebar-list-item active"><a class="hr-app-section__sidebar-item-link"
                                                                         href="#">Vacancies</a></li>
-                <li class="HR-app-section__sidebar-list-item"><a class="HR-app-section__sidebar-item-link" href="#">Candidates</a>
+                <li class="hr-app-section__sidebar-list-item"><a class="hr-app-section__sidebar-item-link" href="#">Candidates</a>
                 </li>
-                <li class="HR-app-section__sidebar-list-item"><a class="HR-app-section__sidebar-item-link" href="#">Management</a>
+                <li class="hr-app-section__sidebar-list-item"><a class="hr-app-section__sidebar-item-link" href="#">Management</a>
                 </li>
-            </ul>
-        </div>
-    </div>
-    <section class="HR-app-section__right-bar">
-        <div class="HR-app-section__right-bar-wrap">
-            <div class="HR-app-section__right-bar__search-bar">
-                <div class="HR-app-section__right-bar__search-field-wrap">
-                    <svg class="icon icon-SEARCH ">
-                        <use xlink:href="assets/images/svg/symbol/sprite.svg#SEARCH"></use>
-                    </svg>
-                    <form class="HR-app-section__right-bar__search-form" action="">
-                        <input class="HR-app-section__right-bar__search-input" type="search" id="vacancies-search"
-                               placeholder="Search for vacancies, candidates...">
-                    </form>
-                </div>
-                <div class="HR-app-section__right-bar__icon-panel-wrap">
+                <li class="hr-app-section__sidebar-list-item mobile-item"><a class="hr-app-section__sidebar-item-link"
+                                                                             href="#">Notifications
                     <svg class="icon icon-BELL ">
                         <use xlink:href="assets/images/svg/symbol/sprite.svg#BELL"></use>
                     </svg>
-                    <svg class="icon icon-MAXIMIZE ">
-                        <use xlink:href="assets/images/svg/symbol/sprite.svg#MAXIMIZE"></use>
+                </a></li>
+            </ul>
+            <a class="hr-app-section__exit-button mobile-item" href="#">Exit
+                <svg class="icon icon-exit ">
+                    <use xlink:href="assets/images/svg/symbol/sprite.svg#exit"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <section class="hr-app-section__right-bar">
+        <div class="hr-app-section__right-bar-wrap">
+            <div class="hr-app-section__right-bar__search-bar">
+                <div class="hr-app-section__right-bar__search-bar__hamburger-wrapper">
+                    <svg class="icon icon-HAMBURGER ">
+                        <use xlink:href="assets/images/svg/symbol/sprite.svg#HAMBURGER"></use>
+                    </svg>
+                </div>
+                <div class="hr-app-section__right-bar__search-field-wrap">
+                    <svg class="icon icon-SEARCH ">
+                        <use xlink:href="assets/images/svg/symbol/sprite.svg#SEARCH"></use>
+                    </svg>
+                    <form class="hr-app-section__right-bar__search-form" action="">
+                        <input class="hr-app-section__right-bar__search-input" type="search" id="vacancies-search"
+                               placeholder="Search...">
+                    </form>
+                </div>
+                <div class="hr-app-section__right-bar__icon-panel-wrap">
+                    <svg class="icon icon-BELL ">
+                        <use xlink:href="assets/images/svg/symbol/sprite.svg#BELL"></use>
+                    </svg>
+                    <svg class="icon icon-exit ">
+                        <use xlink:href="assets/images/svg/symbol/sprite.svg#exit"></use>
                     </svg>
                 </div>
             </div>
-            <div class="vacancies-block__filters-bar">
-                <h3 class="filters-bar__header">Vacancies</h3>
-                <div class="filters-bar__wrap">
-                    <div class="filters-bar__text">Filter by</div>
-                    <select class="filters-bar__select">
-                        <option class="filters-bar__select-option">Name</option>
-                        <option class="filters-bar__select-option">Name</option>
-                        <option class="filters-bar__select-option">Name</option>
-                    </select>
-                    <div class="filters-bar__dropdown">Name
-                        <ul class="filters-bar__dropdown-list">
-                            <li class="filters-bar__dropdown-list-item"><a
-                                    class="filters-bar__dropdown-item-link">Nai</a></li>
-                            <li class="filters-bar__dropdown-list-item">Name</li>
-                            <li class="filters-bar__dropdown-list-item">Name</li>
-                        </ul>
+            <div class="vacancies-block__hr-app__filters-bar">
+                <div class="vacancies-block__filters-bar__header-wrapper">
+                    <h3 class="vacancies-block__filters-bar__header">Vacancies</h3>
+                    <button class="vacancies-block__filters-bar__add-profile-button"><span>+</span></button>
+                </div>
+                <div class="vacancies-block__filters-bar__wrap">
+                    <div class="vacancies-block__filters-bar__text-wrapper" data-toggle="collapse" data-target=""
+                         role="button" aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__filters-bar__text">Filter by</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
                     </div>
-                    <div class="filters-bar__input-wrap">
-                        <input class="filters-bar__input" type="text"><span></span>
-                    </div>
-                    <div class="filters-bar__input-wrap">
-                        <input class="filters-bar__input" type="text"><span></span>
+                    <div class="vacancies-block__filters-bar__fields-wrapper" id="filters-bar-collapse"
+                         data-parent="#vacancies-block__table">
+                        <div class="vacancies-block__filters-bar__filter-item">
+                            <div class="vacancies-block__filters-bar__select-text">Name</div>
+                            <div class="vacancies-block__filters-bar__input-wrap">
+                                <input class="vacancies-block__filters-bar__input" type="text">
+                            </div>
+                        </div>
+                        <div class="vacancies-block__filters-bar__filter-item">
+                            <div class="vacancies-block__filters-bar__select-text">Age</div>
+                            <div class="vacancies-block__filters-bar__input-wrap justify-content-between"><span
+                                    class="vacancies-block__filters-bar__input-wrap__text">from</span>
+                                <input class="vacancies-block__filters-bar__input small--input" type="text"
+                                       maxlength="2"><span
+                                        class="vacancies-block__filters-bar__input-wrap__text">to</span>
+                                <input class="vacancies-block__filters-bar__input small--input" type="text"
+                                       maxlength="2">
+                            </div>
+                        </div>
+                        <div class="vacancies-block__filters-bar__filter-item">
+                            <div class="vacancies-block__filters-bar__select-text">Status</div>
+                            <select class="vacancies-block__filters-bar__select">
+                                <option class="vacancies-block__filters-bar__select-option">Rejected CV</option>
+                                <option class="vacancies-block__filters-bar__select-option">Accepted CV</option>
+                                <option class="vacancies-block__filters-bar__select-option">No CV</option>
+                            </select>
+                        </div>
+                        <div class="vacancies-block__filters-bar__dropdown">Name
+                            <ul class="vacancies-block__filters-bar__dropdown-list">
+                                <li class="vacancies-block__filters-bar__dropdown-list-item"><a
+                                        class="vacancies-block__filters-bar__dropdown-item-link">Nai</a></li>
+                                <li class="vacancies-block__filters-bar__dropdown-list-item">Name</li>
+                                <li class="vacancies-block__filters-bar__dropdown-list-item">Name</li>
+                            </ul>
+                        </div>
+                        <div class="vacancies-block__filters-bar__pagination">
+                            <span>1</span><span> of</span><span> 12</span></div>
+                        <div class="vacancies-block__filters-bar__sort-button-wrapper">
+                            <div class="vacancies-block__filters-bar__sort-button">Filter</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="vacancies-block__table">
+            <div class="vacancies-block__table" id="vacancies-block__table">
                 <div class="vacancies-block__table__header-row table--row">
                     <div class="vacancies-block__table-col table--header-col">Profession</div>
                     <div class="vacancies-block__table-col table--header-col">Requirements</div>
@@ -80,96 +130,361 @@
                     <div class="vacancies-block__table-col table--header-col">Contact us</div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
                 <div class="vacancies-block__table__row table--row table-row--big">
-                    <div class="vacancies-block__table-col">Javascript Developer</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col">Distribute</div>
-                    <div class="vacancies-block__table-col"><a href="">View candidates</a></div>
+                    <div class="vacancies-block__table-col" data-toggle="collapse" data-target="" role="button"
+                         aria-expanded="false" aria-controls="filters-bar-collapse">
+                        <div class="vacancies-block__table-col__profession">Javascript Разработчик</div>
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Requirements</div>
+                    <div class="vacancies-block__table-col">
+                        <ul>
+                            <li>- Bootstrap 4</li>
+                            <li>- Jquery</li>
+                            <li>- React ative</li>
+                            <li>- Angular JS</li>
+                            <li>- Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="vacancies-block__mobile-table-col-header">Our advantages</div>
+                    <div class="vacancies-block__table-col">
+                        <div class="vacancies-block__table-col__advantages">We have very big office and parking, 24/7
+                            free fresh coffee and friendly team.
+                        </div>
+                    </div>
+                    <div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="">View
+                        candidates</a></div>
                 </div>
             </div>
             <div class="vacancies-block__table-editor">
-                <div class="table-editor__text">Rows per page:</div>
-                <select class="table-editor__select">
-                    <option class="table-editor__select-option">10</option>
-                    <option class="table-editor__select-option">12</option>
-                </select>
-                <div class="table-editor__pagination">1-12 of 100</div>
-                <svg class="icon icon-ARROW ">
-                    <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
-                </svg>
-                <svg class="icon icon-ARROW ">
-                    <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
-                </svg>
+                <div class="vacancies-block__table-editor__col">
+                    <div class="vacancies-block__table-editor__text">Rows per page:</div>
+                    <select class="vacancies-block__table-editor__select">
+                        <option class="vacancies-block__table-editor__select-option">10</option>
+                        <option class="vacancies-block__table-editor__select-option">12</option>
+                    </select>
+                </div>
+                <div class="vacancies-block__table-editor__col order-2">
+                    <div class="vacancies-block__table-editor__pagination">1-12 of 100</div>
+                </div>
+                <div class="vacancies-block__table-editor__page-buttons vacancies-block__table-editor__col order-1 order-lg-2">
+                    <div class="vacancies-block__table-editor__page-prev-button">
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                    <div class="vacancies-block__table-editor__page-next-button">
+                        <svg class="icon icon-ARROW ">
+                            <use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="vacancies-block__fixed-round">
+                    <div class="vacancies-block__fixed-round__plus">+</div>
+                </div>
             </div>
-            <div class="vacancies-block__fixed-round"><span>+</span></div>
         </div>
     </section>
 </section>
+<script src="assets/js/libs.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
