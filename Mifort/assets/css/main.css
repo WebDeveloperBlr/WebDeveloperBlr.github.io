@@ -10401,6 +10401,19 @@ input:focus:-ms-input-placeholder {
     color: #929292;
 }
 
+.vacancies-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 .vacancies-block__hr-app__filters-bar {
     background-color: #fff;
     z-index: 2;
@@ -10411,11 +10424,13 @@ input:focus:-ms-input-placeholder {
 
 @media (max-width: 515px) {
     .vacancies-block__hr-app__filters-bar {
+        z-index: 1;
         padding: 15px 40px;
         text-align: center;
         -webkit-box-shadow: 0px 7px 20px -10px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 7px 20px -10px rgba(0, 0, 0, 0.2);
     }
+
 }
 
 .slide-up {
@@ -10434,6 +10449,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .vacancies-block__filters-bar__header-wrapper {
+    z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -10453,6 +10469,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .vacancies-block__filters-bar__wrap {
+    z-index: 1;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -10477,6 +10494,20 @@ input:focus:-ms-input-placeholder {
         font-size: 1.25rem;
         border: 2px solid #51D6A6;
         cursor: pointer;
+    }
+
+    .vacancies-block__filters-bar__wrap .show :after {
+        content: '';
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        bottom: 0;
+        width: 100%;
+        transition: all .5s ease;
     }
 }
 
@@ -10951,6 +10982,7 @@ input:focus:-ms-input-placeholder {
 
 .vacancies-block__table__xs-cols-wrap {
     display: block;
+    width: 100%;
 }
 
 @media (min-width: 515px) {
@@ -10971,6 +11003,7 @@ input:focus:-ms-input-placeholder {
     align-items: center;
     position: fixed;
     bottom: 0;
+
     width: 100%;
     height: 90px;
     background-color: #fff;
@@ -10984,6 +11017,7 @@ input:focus:-ms-input-placeholder {
 
 @media (max-width: 515px) {
     .vacancies-block__table-editor {
+        left: 0;
         height: 70px;
         -webkit-box-pack: center;
         -ms-flex-pack: center;

@@ -9,6 +9,22 @@ $(document).ready(function () {
     this.bindEvents();
   }
 
+  function HrAppBuilder(elem) {
+    this.hrAppSection = elem;
+    this.sidebar = $(this.hrAppSection).find('.hr-app-section__sidebar');
+    if ($(this.hrAppSection.find('#vacancies-block')).length > 0) {
+      new Vacancies(this.hrAppSection.find('#vacancies-block'));
+    }
+    if (window.matchMedia('(max-width: 515px)').matches) {
+      this.toggleButton = $(this.hrAppSection).find('.icon-HAMBURGER');
+      this.crossButton = $(this.sidebar).find('.icon-CLOSE');
+
+      this.bindMobileEvents();
+    } else {
+      this.bindEvents();
+    }
+  }
+
   ProfileBuilder.prototype.bindEvents = function () {
     var self = this;
 
@@ -26,33 +42,111 @@ $(document).ready(function () {
     }
   };
 
-  function HrAppBuilder(elem) {
-    this.hrAppSection = elem;
-    this.filterSection = $(this.hrAppSection).find('.vacancies-block__hr-app__filters-bar');
-    this.table = $(this.hrAppSection).find('#vacancies-block__table');
-    this.sidebar = $(this.hrAppSection).find('.hr-app-section__sidebar');
+  function Vacancies(element) {
+    this.section = element;
+    this.filterBar = this.section.find('.vacancies-block__hr-app__filters-bar');
+    this.vacancies = [];
+    this.table = $(this.section).find('#vacancies-block__table');
+    this.numbVacancies = +($(this.section).find("#rows-per-page-vacancies option:selected").text());
 
     if (window.matchMedia('(max-width: 515px)').matches) {
-      this.collapseElems = $(this.hrAppSection).find('[data-toggle="collapse"]');
-      this.tableCollapseElems = $(this.table).find('[data-toggle="collapse"]');
-      this.toggleButton = $(this.hrAppSection).find('.icon-HAMBURGER');
-      this.crossButton = $(this.sidebar).find('.icon-CLOSE');
       this.canSlide = true;
-      this.adaptToMobile();
-      this.bindMobileEvents();
+      this.collapseElems = $(this.section).find('[data-toggle="collapse"]');
+      this.fillTable();
     } else {
+      this.fillTable();
       this.bindEvents();
     }
-
   }
 
-  HrAppBuilder.prototype.addCollapse = function addCollapse(elem, target) {
+  Vacancies.prototype.fillTable = function () {
+    var self = this;
+    (function () {
+      var URL = "assets/json/vacancies.json";
+      $.getJSON(URL, {
+        tags: "mount rainier",
+        tagmode: "any",
+        format: "json"
+      })
+        .done(function (data) {
+          if (self.collapseElems) {
+            self.getMobileTable(data);
+          } else {
+            self.getTable(data);
+          }
+          if (window.matchMedia('(max-width: 515px)').matches) {
+            self.tableCollapseElems = $(self.table).find('[data-toggle="collapse"]');
+            self.bindMobileEvents();
+          }
+        });
+    })();
+
+
+  };
+
+
+  Vacancies.prototype.getTable = function (data) {
+    var self = this;
+    self.vacancies = data;
+    var row;
+    for (var i = 0; i < self.numbVacancies; i++) {
+      row = '<div class="vacancies-block__table__row table--row table-row--big">\n';
+      for (var key in self.vacancies[i]) {
+        switch (key) {
+          case "position":
+            row += '<div class="vacancies-block__table-col" data-toggle="collapse" data-target="#vacancies-block__table__xs-cols-wrap-"ad role="button" aria-expanded="false" aria-controls="filters-bar-collapse"><div class="vacancies-block__table-col__profession">' + self.vacancies[i][key] + '</div><svg class="icon icon-ARROW "><use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use></svg></div>';
+            break;
+          case "viewСandidates":
+            row += '<div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="#">' + self.vacancies[i][key] + '</a></div>';
+            break;
+          default:
+            row += '<div class="vacancies-block__table-col"><div class="vacancies-block__table-col__advantages">' + self.vacancies[i][key] + '</div></div>';
+        }
+      }
+      $(self.table).append(row);
+    }
+  };
+
+  Vacancies.prototype.getMobileTable = function (data) {
+    var self = this;
+    self.vacancies = data;
+    var row;
+    var mobileHeaders = ['Status', 'Salary'];
+    for (var i = 0; i < self.numbVacancies; i++) {
+      row = '<div class="vacancies-block__table__row table--row table-row--big">\n';
+      var j = 0;
+      for (var key in self.vacancies[i]) {
+        if (j === 0) {
+          row += '<div class="vacancies-block__table-col" data-toggle="collapse" data-target="#vacancies-block__table__xs-cols-wrap-' + i + '"addrole="button" aria-expanded="false" aria-controls="filters-bar-collapse"><div class="vacancies-block__table-col__profession">' + self.vacancies[i][key] + '</div><svg class="icon icon-ARROW "><use xlink:href="assets/images/svg/symbol/sprite.svg#ARROW"></use></svg></div><div class="vacancies-block__table__xs-cols-wrap collapse" style="width: 100%;" data-parent="#vacancies-block__table" id="vacancies-block__table__xs-cols-wrap-' + i + '">';
+        } else if (j === Object.keys(self.vacancies[i]).length - 1) {
+          row += '<div class="vacancies-block__table-col"><a class="vacancies-block__table-col__button" href="#">' + self.vacancies[i][key] + '</a></div></div>';
+        } else {
+          row += '<div class="vacancies-block__mobile-table-col-header">' + mobileHeaders[j - 1] + '</div>';
+          row += '<div class="vacancies-block__table-col"><div class="vacancies-block__table-col__advantages">' + self.vacancies[i][key] + '</div></div>';
+        }
+        j++;
+      }
+      $(self.table).append(row);
+    }
+
+    $(self.collapseElems).each(function (index, el) {
+      self.addCollapse(el, $(el).next());
+    });
+
+    $('.vacancies-block__table-editor__text').html('Rows');
+  };
+
+
+  Vacancies.prototype.addCollapse = function addCollapse(elem, target) {
     var collapseTarget = ($(target).attr("id")) ? "#" + $(target).attr("id") : "." + $(target).attr("class");
     $(target).addClass("collapse");
     $(elem).attr("data-target", collapseTarget);
     $(elem).attr("aria-controls", collapseTarget.slice(1));
   };
   HrAppBuilder.prototype.bindEvents = function () {
+
+  };
+  Vacancies.prototype.bindEvents = function () {
     var self = this;
 
     var previousScroll = 0;
@@ -64,12 +158,22 @@ $(document).ready(function () {
   HrAppBuilder.prototype.bindMobileEvents = function () {
     var self = this;
 
+    $(this.toggleButton).on('click', function () {
+      self.showSidebar();
+    });
+
+    $(this.crossButton).on('click', function () {
+      self.hideSidebar();
+    });
+  };
+  Vacancies.prototype.bindMobileEvents = function () {
+    var self = this;
     $(self.tableCollapseElems.next()).on('show.bs.collapse', function () {
       $(this).prev().find('.icon-ARROW').addClass('rotate270');
       $(self.filterSection).addClass('slide-up');
       self.canSlide = false;
     });
-    $(self.tableCollapseElems.next()).on('hide.bs.collapse', function () {
+    $(self.tableCollapseElems.next()).on('hide.bs.collapse', function (e) {
       $(this).prev().find('.icon-ARROW').removeClass('rotate270');
       self.canSlide = true;
     });
@@ -79,14 +183,6 @@ $(document).ready(function () {
       var currentScroll = $(this).scrollTop();
       previousScroll = self.slideFilterBarMobile(previousScroll, currentScroll);
     });
-
-    $(this.toggleButton).on('click', function () {
-      self.showSidebar();
-    });
-
-    $(this.crossButton).on('click', function () {
-      self.hideSidebar();
-    });
   };
   HrAppBuilder.prototype.showSidebar = function () {
     $(this.sidebar).addClass('slide-in');
@@ -94,37 +190,28 @@ $(document).ready(function () {
   HrAppBuilder.prototype.hideSidebar = function () {
     $(this.sidebar).removeClass('slide-in');
   };
-  HrAppBuilder.prototype.slideFilterBar = function (previousScroll, currentScroll) {
-    if (currentScroll > previousScroll) {
-      $(this.filterSection).addClass('slide-up');
+  Vacancies.prototype.slideFilterBar = function (previousScroll, currentScroll) {
+    if (currentScroll > previousScroll || currentScroll !== 0) {
+      $(this.filterBar).addClass('slide-up');
     } else {
-      $(this.filterSection).removeClass('slide-up');
+      $(this.filterBar).removeClass('slide-up');
     }
     return previousScroll = currentScroll;
   };
-  HrAppBuilder.prototype.slideFilterBarMobile = function (previousScroll, currentScroll) {
-    if (currentScroll > previousScroll || !this.canSlide) {
-      $(this.filterSection).addClass('slide-up');
+  Vacancies.prototype.slideFilterBarMobile = function (previousScroll, currentScroll) {
+    console.log(previousScroll + " " + currentScroll);
+    if (currentScroll < this.table.height() / 2) {
+      if (currentScroll >= previousScroll || !this.canSlide) {
+        $(this.filterBar).addClass('slide-up');
+      } else {
+        $(this.filterBar).removeClass('slide-up');
+      }
     } else {
-      $(this.filterSection).removeClass('slide-up');
+      return 0;
     }
-    return previousScroll = currentScroll;
+    return currentScroll;
   };
-  HrAppBuilder.prototype.adaptToMobile = function () {
-    var self = this;
-    var tableRows = $(self.hrAppSection).find('.vacancies-block__table__row');
 
-    tableRows.each(function (index, el) {
-      $(el).children().slice(1).wrapAll('<div class="vacancies-block__table__xs-cols-wrap" data-parent="#vacancies-block__table" id="vacancies-block__table__xs-cols-wrap-' + index + '"></div>');
-    });
-
-
-    $(self.collapseElems).each(function (index, el) {
-      self.addCollapse(el, $(el).next());
-    });
-
-    $('.vacancies-block__table-editor__text').html('Rows');
-  };
 
   var hrAppWrapper = $(document).find(".hr-app-section");
   if (hrAppWrapper.length > 0) {
